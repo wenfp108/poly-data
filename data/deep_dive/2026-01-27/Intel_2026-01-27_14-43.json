@@ -1,0 +1,63 @@
+[
+  {
+    "title": "What will Gold (GC) hit__ by end of June?",
+    "total_vol": "$131,912",
+    "active_signals": [
+      {
+        "node": "↑ $8,000",
+        "prices": "Yes: 15% | No: 85%",
+        "vol": "$2,945"
+      },
+      {
+        "node": "↑ $7,000",
+        "prices": "Yes: 17% | No: 83%",
+        "vol": "$1,000"
+      },
+      {
+        "node": "↑ $6,500",
+        "prices": "Yes: 24% | No: 76%",
+        "vol": "$21,528"
+      },
+      {
+        "node": "↑ $6,200",
+        "prices": "Yes: 42% | No: 59%",
+        "vol": "$3,342"
+      },
+      {
+        "node": "↑ $6,000",
+        "prices": "Yes: 50% | No: 51%",
+        "vol": "$10,936"
+      },
+      {
+        "node": "↑ $5,500",
+        "prices": "Yes: 78% | No: 23%",
+        "vol": "$30,049"
+      },
+      {
+        "node": "↓ $4,200",
+        "prices": "Yes: 39% | No: 62%",
+        "vol": "$2,986"
+      },
+      {
+        "node": "↓ $3,800",
+        "prices": "Yes: 22% | No: 78%",
+        "vol": "$4,406"
+      },
+      {
+        "node": "↓ $3,400",
+        "prices": "Yes: 9% | No: 91%",
+        "vol": "$1,822"
+      },
+      {
+        "node": "↑ $5,700",
+        "prices": "Yes: 68% | No: 33%",
+        "vol": "$0"
+      },
+      {
+        "node": "↑ $8,500",
+        "prices": "Yes: 11% | No: 89%",
+        "vol": "$4"
+      }
+    ]
+  }
+]

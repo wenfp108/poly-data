@@ -1,0 +1,24 @@
+[
+  {
+    "info": "No data",
+    "debug": [
+      "Task Start: Generated 16 queries",
+      "[ERR] \"What will Gold (GC) settle at in January?\": getaddrinfo ENOTFOUND p6o7n0849h-3.algolianet.com",
+      "[ERR] \"What will Gold (GC) hit__ by end of January?\": getaddrinfo ENOTFOUND p6o7n0849h-3.algolianet.com",
+      "[ERR] \"Fed decision in January?\": getaddrinfo ENOTFOUND p6o7n0849h-3.algolianet.com",
+      "[ERR] \"What price will Bitcoin hit in January?\": getaddrinfo ENOTFOUND p6o7n0849h-3.algolianet.com",
+      "[ERR] \"What will Gold (GC) settle at in February?\": getaddrinfo ENOTFOUND p6o7n0849h-3.algolianet.com",
+      "[ERR] \"What will Gold (GC) hit__ by end of February?\": getaddrinfo ENOTFOUND p6o7n0849h-3.algolianet.com",
+      "[ERR] \"Fed decision in February?\": getaddrinfo ENOTFOUND p6o7n0849h-3.algolianet.com",
+      "[ERR] \"What price will Bitcoin hit in February?\": getaddrinfo ENOTFOUND p6o7n0849h-3.algolianet.com",
+      "[ERR] \"How many Fed rate cuts in 2026?\": getaddrinfo ENOTFOUND p6o7n0849h-3.algolianet.com",
+      "[ERR] \"Bitcoin all time high by ___?\": getaddrinfo ENOTFOUND p6o7n0849h-3.algolianet.com",
+      "[ERR] \"Bitcoin price on January 27?\": getaddrinfo ENOTFOUND p6o7n0849h-3.algolianet.com",
+      "[ERR] \"Bitcoin above ___ on January 27?\": getaddrinfo ENOTFOUND p6o7n0849h-3.algolianet.com",
+      "[ERR] \"Bitcoin price on January 28?\": getaddrinfo ENOTFOUND p6o7n0849h-3.algolianet.com",
+      "[ERR] \"Bitcoin above ___ on January 28?\": getaddrinfo ENOTFOUND p6o7n0849h-3.algolianet.com",
+      "[ERR] \"Bitcoin price on January 29?\": getaddrinfo ENOTFOUND p6o7n0849h-3.algolianet.com",
+      "[ERR] \"Bitcoin above ___ on January 29?\": getaddrinfo ENOTFOUND p6o7n0849h-3.algolianet.com"
+    ]
+  }
+]

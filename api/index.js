@@ -4,7 +4,7 @@ export default async function handler(req, res) {
   try {
     const { GITHUB_TOKEN, REPO_OWNER, REPO_NAME, CRON_SECRET } = process.env;
 
-    // 🔒 1. 安全校验 (520laowen)
+    // 🔒 1. 安全门神 (520laowen)
     if (req.query.key !== CRON_SECRET) {
       return res.status(401).json({ error: '⛔ Unauthorized' });
     }
@@ -14,7 +14,7 @@ export default async function handler(req, res) {
       'Referer': 'https://polymarket.com/'
     };
 
-    // === 📅 2. 智能时间逻辑 (你的原始核心策略) ===
+    // === 📅 2. 你的核心提问策略 (完全恢复) ===
     const now = new Date();
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     const currDay = now.getDate();
@@ -33,9 +33,11 @@ export default async function handler(req, res) {
     }
 
     const getFmtDate = (dateObj) => `${months[dateObj.getMonth()]} ${dateObj.getDate()}`;
-    const targetDates = [getFmtDate(now), getFmtDate(new Date(now.getTime() + 86400000)), getFmtDate(new Date(now.getTime() + 172800000))];
+    const t0 = new Date(now);
+    const t1 = new Date(now.getTime() + 86400000);
+    const t2 = new Date(now.getTime() + 172800000);
+    const targetDates = [getFmtDate(t0), getFmtDate(t1), getFmtDate(t2)];
 
-    // === 🔍 3. 指令生成器 (保留你的下划线和固定格式) ===
     let searchQueries = [];
     targetMonths.forEach(m => {
         searchQueries.push(`What will Gold (GC) settle at in ${m}?`);
@@ -58,30 +60,28 @@ export default async function handler(req, res) {
     let debugLog = [];
     debugLog.push(`Task Start: Generated ${searchQueries.length} queries`);
 
-    // 🚀 4. 强制搜索逻辑：直接使用 Polymarket 的 Search API 绕过 DNS 故障
-    // 不再直接连接 Algolia 域名，改用官网的后端代理
+    // 🚀 3. 核心搜索：使用官方搜索代理接口 (避开 DNS 坑，确保精度)
     for (const q of searchQueries) {
       try {
+        // 【关键】这里用的是 public-search，它在后台调用 Algolia 但走的是官方域名
         const searchUrl = `https://gamma-api.polymarket.com/public-search?q=${encodeURIComponent(q)}`;
         const searchResp = await axios.get(searchUrl, { headers, timeout: 5000 });
         
-        // 提取前 2 个最相关的 Slug (增加命中率)
         if (searchResp.data && searchResp.data.length > 0) {
-          searchResp.data.slice(0, 2).forEach(item => {
-            if (item.slug) {
-                scoutedSlugs.add(item.slug);
-                debugLog.push(`[SEARCH OK] "${q}" -> ${item.slug}`);
-            }
-          });
+          const bestMatch = searchResp.data[0];
+          if (bestMatch.slug) {
+              scoutedSlugs.add(bestMatch.slug);
+              debugLog.push(`[OK] "${q}" -> ${bestMatch.slug}`);
+          }
         } else {
-          debugLog.push(`[NOT FOUND] "${q}"`);
+          debugLog.push(`[EMPTY] "${q}"`);
         }
       } catch (err) {
         debugLog.push(`[SEARCH ERR] "${q}": ${err.message}`);
       }
     }
 
-    // 🚀 5. 第二阶段：完整数据提取 (包含你的过滤逻辑)
+    // 🚀 4. 数据提取 (恢复你的完整过滤和解析逻辑)
     let processedData = [];
     for (const slug of Array.from(scoutedSlugs)) {
       try {
@@ -93,7 +93,7 @@ export default async function handler(req, res) {
             if (!m.active || m.closed) return;
             const vol = Number(m.volume || 0);
             const liq = Number(m.liquidity || 0);
-            if (vol < 50 && liq < 50) return; // 稍微放宽过滤条件
+            if (vol < 100 && liq < 100) return; 
 
             let prices = [], outcomes = [];
             try {
@@ -124,7 +124,7 @@ export default async function handler(req, res) {
 
     processedData.sort((a, b) => b.volume - a.volume);
 
-    // 🚀 6. 第三阶段：GitHub 存档 (保持不变)
+    // 🚀 5. GitHub 存档
     const isoString = now.toISOString();
     const datePart = isoString.split('T')[0];
     const timePart = isoString.split('T')[1].split('.')[0].replace(/:/g, '-');
@@ -133,7 +133,7 @@ export default async function handler(req, res) {
     const contentPayload = processedData.length > 0 ? processedData : [{ info: "No data found", debug: debugLog }];
 
     await axios.put(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${path}`, {
-      message: `Sync: ${fileName}`,
+      message: `Strategy Sync: ${fileName}`,
       content: Buffer.from(JSON.stringify(contentPayload, null, 2)).toString('base64')
     }, { headers: { Authorization: `Bearer ${GITHUB_TOKEN}` } });
 

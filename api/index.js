@@ -4,7 +4,7 @@ export default async function handler(req, res) {
   try {
     const { GITHUB_TOKEN, REPO_OWNER, REPO_NAME, CRON_SECRET } = process.env;
 
-    // 🔒 1. 安全门神
+    // 🔒 1. 安全门神 (保持不变)
     if (req.query.key !== CRON_SECRET) {
       return res.status(401).json({ error: '⛔ Unauthorized' });
     }
@@ -14,61 +14,42 @@ export default async function handler(req, res) {
       'Referer': 'https://polymarket.com/'
     };
 
-    // === 📅 2. 智能时间逻辑 (The Time Machine) ===
+    // === 📅 2. 智能时间逻辑 (保持不变，下划线逻辑不动) ===
     const now = new Date();
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     
-    // 当前基础时间
     const currDay = now.getDate();
     const currMonthIdx = now.getMonth();
     const currYear = now.getFullYear();
 
-    // A. 月份逻辑 (15号切分)
-    // 默认只看本月。如果今天 >= 15号，额外看下个月。
     let targetMonths = [months[currMonthIdx]];
     if (currDay >= 15) {
         const nextMonthIdx = (currMonthIdx + 1) % 12;
         targetMonths.push(months[nextMonthIdx]);
     }
 
-    // B. 年份逻辑 (10月切分)
-    // 默认只看今年。如果现在是10月(Index 9)或以后，额外看明年。
     let targetYears = [String(currYear)];
     if (currMonthIdx >= 9) { 
         targetYears.push(String(currYear + 1));
     }
 
-    // C. 日期逻辑 (T+0, T+1, T+2)
-    // 你的例子：今天1月27，搜1月28(T+1)和1月29(T+2)。
-    // 为了保险，我加上了 T+0 (今天)，防止漏掉正在进行的今日决算。
     const getFmtDate = (dateObj) => `${months[dateObj.getMonth()]} ${dateObj.getDate()}`;
-    
     const t0 = new Date(now);
-    const t1 = new Date(now.getTime() + 86400000);     // 明天
-    const t2 = new Date(now.getTime() + 86400000 * 2); // 后天
-    
+    const t1 = new Date(now.getTime() + 86400000);
+    const t2 = new Date(now.getTime() + 86400000 * 2);
     const targetDates = [getFmtDate(t0), getFmtDate(t1), getFmtDate(t2)];
 
-    // === 🔍 3. 指令生成器 (按照你的标题格式) ===
     let searchQueries = [];
-
-    // 3.1 月份类问题
     targetMonths.forEach(m => {
         searchQueries.push(`What will Gold (GC) settle at in ${m}?`);
         searchQueries.push(`What will Gold (GC) hit__ by end of ${m}?`);
         searchQueries.push(`Fed decision in ${m}?`);
         searchQueries.push(`What price will Bitcoin hit in ${m}?`);
     });
-
-    // 3.2 年份类问题
     targetYears.forEach(y => {
         searchQueries.push(`How many Fed rate cuts in ${y}?`);
     });
-
-    // 3.3 固定问题 (无时间)
     searchQueries.push(`Bitcoin all time high by ___?`);
-
-    // 3.4 日期类问题 (T+0, T+1, T+2)
     targetDates.forEach(d => {
         searchQueries.push(`Bitcoin price on ${d}?`);
         searchQueries.push(`Bitcoin above ___ on ${d}?`);
@@ -79,23 +60,38 @@ export default async function handler(req, res) {
     let scoutedSlugs = new Set();
     let debugLog = [];
 
-    // 🚀 第一阶段：搜索 (Scouting)
+    // 🚀 第一阶段：搜索 (Scouting) - 【此处已修改为 Algolia 高精度方案】
+    // 这是官网搜索框的真实接口，专门用来把问题转换成 slug
+    const algoliaUrl = "https://p6o7n0849h-dsn.algolia.net/1/indexes/*/queries?x-algolia-agent=Algolia%20for%20JavaScript%20(4.20.0)";
+    const algoliaHeaders = {
+      'x-algolia-api-key': '0699042c3ef3ef3083163683a3f3607f',
+      'x-algolia-application-id': 'P6O7N0849H'
+    };
+
     for (const q of searchQueries) {
-      // 这里的 limit 设为 10，保证每个问题抓前10个最相关的
-      const url = `https://gamma-api.polymarket.com/markets?q=${encodeURIComponent(q)}&active=true&closed=false&limit=10`;
-      const resp = await axios.get(url, { headers });
-      const items = resp.data || [];
-      
-      items.forEach(item => {
-          // 简单校验：只要 slug 存在就加入待抓取列表
-          if(item.eventSlug || item.slug) {
-              scoutedSlugs.add(item.eventSlug || item.slug);
-          }
-      });
-      debugLog.push(`Query [${q}] found ${items.length} items`);
+      try {
+        const algoliaBody = {
+          "requests": [{
+            "indexName": "polymarket_events_production",
+            "params": `query=${encodeURIComponent(q)}&hitsPerPage=1` // 精准锁定第1个结果
+          }]
+        };
+
+        const algoliaResp = await axios.post(algoliaUrl, algoliaBody, { headers: algoliaHeaders });
+        const hit = algoliaResp.data.results[0].hits[0];
+
+        if (hit && hit.slug) {
+          scoutedSlugs.add(hit.slug);
+          debugLog.push(`Query [${q}] -> Found Slug: ${hit.slug}`);
+        } else {
+          debugLog.push(`Query [${q}] -> No match found`);
+        }
+      } catch (err) {
+        console.error(`Algolia error for query [${q}]:`, err.message);
+      }
     }
 
-    // 🚀 第二阶段：提取 (Fetching)
+    // 🚀 第二阶段：提取 (Fetching) - (保持不变，现在它能拿到真正的 slug 了)
     let processedData = [];
 
     for (const slug of scoutedSlugs) {
@@ -106,23 +102,17 @@ export default async function handler(req, res) {
         if (!event || !event.markets) continue;
 
         event.markets.forEach(m => {
-            // 🛡️ 基础过滤：只看活跃且未结束的
             if (!m.active || m.closed) return;
-
-            // 🛡️ 垃圾过滤：成交量或流动性太低的不看 (防止只有$1的测试盘)
             const vol = Number(m.volume || 0);
             const liq = Number(m.liquidity || 0);
             if (vol < 100 && liq < 100) return;
 
-            // 解析价格
-            let prices = [];
-            let outcomes = [];
+            let prices = [], outcomes = [];
             try {
                 prices = JSON.parse(m.outcomePrices) || [];
                 outcomes = JSON.parse(m.outcomes) || [];
             } catch (e) { return; }
 
-            // 格式化输出: "Yes: 20% | No: 80%"
             let priceStr = outcomes.map((o, i) => {
                 const pVal = (Number(prices[i]) * 100).toFixed(1);
                 return `${o}: ${pVal}%`;
@@ -131,7 +121,7 @@ export default async function handler(req, res) {
             processedData.push({
                 slug: slug,
                 ticker: m.slug,
-                question: m.groupItemTitle || m.question, // 优先用短标题
+                question: m.groupItemTitle || m.question,
                 eventTitle: event.title,
                 prices: priceStr,
                 volume: Math.round(vol),
@@ -139,32 +129,27 @@ export default async function handler(req, res) {
                 endDate: m.endDate ? m.endDate.split("T")[0] : "N/A"
             });
         });
-
       } catch (e) {
           console.error(`Error fetching slug ${slug}:`, e.message);
       }
     }
 
-    // 按成交量排序，大的在前面
     processedData.sort((a, b) => b.volume - a.volume);
 
-    // 🚀 第三阶段：GitHub 存档
+    // 🚀 第三阶段：GitHub 存档 (保持不变)
     const isoString = now.toISOString();
     const datePart = isoString.split('T')[0];
     const timePart = isoString.split('T')[1].split('.')[0].replace(/:/g, '-');
-    
-    // 文件名：Finance_LIVE_2026-01-28_14-30-05.json
     const fileName = `Finance_LIVE_${datePart}_${timePart}.json`;
     const path = `data/strategy/${datePart}/${fileName}`;
-    
-    const contentPayload = processedData.length > 0 ? processedData : [{ info: "No active markets found for current queries", debug: debugLog }];
+    const contentPayload = processedData.length > 0 ? processedData : [{ info: "No active markets found", debug: debugLog }];
 
     await axios.put(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${path}`, {
       message: `woon-poly-datav1: ${fileName}`,
       content: Buffer.from(JSON.stringify(contentPayload, null, 2)).toString('base64')
     }, { headers: { Authorization: `Bearer ${GITHUB_TOKEN}` } });
 
-    res.status(200).send(`✅ woon-poly-datav1 运行成功！生成文件: ${fileName} (含 ${processedData.length} 条数据)`);
+    res.status(200).send(`✅ 运行成功！发现 ${processedData.length} 条有效数据。`);
   } catch (err) {
     console.error(err);
     res.status(500).send(`❌ Error: ${err.message}`);

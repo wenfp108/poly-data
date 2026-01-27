@@ -1,0 +1,155 @@
+name: Daily Heatmap & JSON Report
+
+# 每天北京时间 23:30 (UTC 15:30) 自动运行
+on:
+  schedule:
+    - cron: '30 15 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Generate Reports
+        run: |
+          cat <<EOF > analyzer.py
+          import os
+          import json
+          from datetime import datetime
+          import pytz
+
+          # 1. 设定目录
+          tz = pytz.timezone('Asia/Shanghai')
+          today_str = datetime.now(tz).strftime('%Y-%m-%d')
+          target_dir = f"data/{today_str}"
+          
+          print(f"正在分析目录: {target_dir}")
+
+          if not os.path.exists(target_dir):
+              print("今日无数据。")
+              exit(0)
+
+          # 2. 核心聚合逻辑 (去重 + 计数)
+          event_map = {}
+          file_count = 0
+
+          for filename in os.listdir(target_dir):
+              # 排除掉咱们自己生成的报告文件，只读原始数据
+              if filename.endswith(".json") and not filename.startswith("DAILY_"):
+                  file_count += 1
+                  filepath = os.path.join(target_dir, filename)
+                  try:
+                      with open(filepath, 'r') as f:
+                          content = json.load(f)
+                          
+                          # 提取唯一 ID
+                          meta = content.get('meta', {})
+                          data = content.get('data', {})
+                          event_id = meta.get('id', data.get('slug', 'unknown'))
+                          
+                          if event_id not in event_map:
+                              event_map[event_id] = {
+                                  "count": 0,
+                                  "latest_data": content # 默认存这个
+                              }
+                          
+                          event_map[event_id]["count"] += 1
+                          
+                          # 逻辑：总是保留成交量(Volume)最大的那份数据作为“最终版”
+                          current_vol = float(data.get('volume', 0))
+                          saved_vol = float(event_map[event_id]['latest_data'].get('data', {}).get('volume', 0))
+                          
+                          if current_vol > saved_vol:
+                              event_map[event_id]['latest_data'] = content
+
+                  except Exception as e:
+                      print(f"Error reading {filename}: {e}")
+
+          # === 输出 1: 生成 Markdown 热力战报 (给人看) ===
+          report_list = []
+          # 同时准备一个纯数据列表 (给 AI 看)
+          raw_data_list = []
+
+          for eid, info in event_map.items():
+              raw_data = info['latest_data']
+              raw_data_list.append(raw_data) # 把完整的原始 JSON 塞进去
+
+              data = raw_data.get('data', {})
+              meta = raw_data.get('meta', {})
+              
+              # 提取胜率逻辑
+              top_outcome = "N/A"
+              top_prob = 0
+              if 'markets' in data and len(data['markets']) > 0:
+                  m = data['markets'][0]
+                  try:
+                      prices = json.loads(m.get('outcomePrices', '[]'))
+                      outcomes = json.loads(m.get('outcomes', '[]'))
+                      if prices and outcomes:
+                          max_p = max(prices)
+                          idx = prices.index(max_p)
+                          top_outcome = outcomes[idx]
+                          top_prob = float(max_p) * 100
+                  except:
+                      pass
+
+              report_list.append({
+                  "title": meta.get('title', data.get('title', eid)),
+                  "sector": meta.get('sector_tag', 'General'),
+                  "count": info['count'],
+                  "volume": float(data.get('volume', 0)),
+                  "prob_str": f"{top_outcome} ({top_prob:.1f}%)",
+                  "url": f"https://polymarket.com/event/{eid}"
+              })
+
+          # 排序
+          report_list.sort(key=lambda x: (x['count'], x['volume']), reverse=True)
+
+          # 写入 Markdown
+          md = f"# 📊 全天候热力战报 ({today_str})\n\n"
+          md += f"**文件采样**: {file_count} | **去重事件**: {len(report_list)}\n\n"
+          md += "| 热度 | 板块 | 事件标题 | 共识 | 资金 |\n"
+          md += "| :--- | :--- | :--- | :--- | :--- |\n"
+
+          for item in report_list:
+              count = item['count']
+              if count >= 20: icon = "🔥🔥🔥"
+              elif count >= 10: icon = "🔥"
+              elif count >= 5: icon = "⭐️"
+              else: icon = "❄️"
+              vol = f"${item['volume']/1000000:.2f}M" if item['volume'] > 1000000 else f"${item['volume']/1000:.0f}k"
+              md += f"| {icon} {count} | {item['sector']} | [{item['title']}]({item['url']}) | {item['prob_str']} | {vol} |\n"
+
+          with open(f"{target_dir}/DAILY_HEATMAP_{today_str}.md", "w") as f:
+              f.write(md)
+
+          # === 输出 2: 生成 JSON 汇总包 (给 AI 分析用) ===
+          # 这是一个包含当天所有去重后原始数据的超级 JSON
+          json_path = f"{target_dir}/DAILY_SUMMARY_{today_str}.json"
+          with open(json_path, 'w') as f:
+              json.dump(raw_data_list, f, indent=2)
+
+          print(f"成功生成双报表：\n1. Heatmap (Markdown)\n2. Summary (JSON, {len(raw_data_list)} items)")
+          EOF
+
+          pip install pytz
+          python analyzer.py
+
+      - name: Commit results
+        run: |
+          git config --global user.name "Report Bot"
+          git config --global user.email "bot@github.com"
+          git add data/
+          git commit -m "📊 Generate Daily Heatmap & JSON" || exit 0
+          git push

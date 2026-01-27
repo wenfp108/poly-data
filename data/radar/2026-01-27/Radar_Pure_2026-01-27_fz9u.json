@@ -1,0 +1,97 @@
+[
+  {
+    "source": "🔒 Fixed",
+    "title": "What will Gold (GC) hit__ by end of June?",
+    "total_vol": "$131,976",
+    "description": "This market will resolve to \"Yes\" if, on any trading day, the official CME settlement price for the Active Month (front month) of Gold (GC) futures is equal to or above the listed price by the final trading day of June 2026. Otherwise, the market will resolve to \"No\".\n\nFor CME Gold (GC) futures contracts, the Active Month is the nearest of CME's designated delivery-cycle months (February, April, June, August, October, December) that is not the spot month. The Active Month changes automatically on the contract's First Position Date, at which point the next eligible contract month becomes the Active Month.\n\nOnly the Active Month's official settlement price published by CME Group will be considered. Intraday trades, highs, lows, bids, offers, midpoint values, or indicative prices do not count.\n\nNote that the settlement price may differ from the last traded price. CME's methodology to determine the settlement price can vary by commodity and contract.\n\nOnly days on which CME publishes an official settlement price for the Active Month will be included. Days without settlement prices (weekends, holidays, or market closures) are ignored.\n\nThis market will resolve based on the settlement price as it appears on the CME settlement page at the time it is first published for that trading day, regardless of any later corrections or updates.\n\nThe resolution source for this market is the CME Group website — specifically, the daily \"Settlement\" price for the Active Month of Gold (GC) futures.",
+    "analysis": {
+      "2026-06-30": [
+        {
+          "choice": "↑ $8,000",
+          "signal": "Yes: 15% | No: 85%",
+          "vol": "$2,945"
+        },
+        {
+          "choice": "↑ $7,000",
+          "signal": "Yes: 17% | No: 83%",
+          "vol": "$1,000"
+        },
+        {
+          "choice": "↑ $6,500",
+          "signal": "Yes: 24% | No: 76%",
+          "vol": "$21,528"
+        },
+        {
+          "choice": "↑ $6,200",
+          "signal": "Yes: 36% | No: 65%",
+          "vol": "$3,342"
+        },
+        {
+          "choice": "↑ $6,000",
+          "signal": "Yes: 48% | No: 53%",
+          "vol": "$10,957"
+        },
+        {
+          "choice": "↑ $5,500",
+          "signal": "Yes: 78% | No: 23%",
+          "vol": "$30,092"
+        },
+        {
+          "choice": "↓ $4,200",
+          "signal": "Yes: 39% | No: 62%",
+          "vol": "$2,986"
+        },
+        {
+          "choice": "↓ $3,800",
+          "signal": "Yes: 22% | No: 78%",
+          "vol": "$4,406"
+        },
+        {
+          "choice": "↓ $3,400",
+          "signal": "Yes: 9% | No: 91%",
+          "vol": "$1,822"
+        },
+        {
+          "choice": "↑ $5,700",
+          "signal": "Yes: 67% | No: 33%",
+          "vol": "$0"
+        },
+        {
+          "choice": "↑ $8,500",
+          "signal": "Yes: 11% | No: 89%",
+          "vol": "$4"
+        }
+      ]
+    }
+  },
+  {
+    "source": "🔒 Fixed",
+    "title": "Fed decision in January?",
+    "total_vol": "$564,894,297",
+    "description": "The FED interest rates are defined in this market by the upper bound of the target federal funds range. The decisions on the target federal fund range are made by the Federal Open Market Committee (FOMC) meetings.\n\nThis market will resolve to the amount of basis points the upper bound of the target federal funds rate is changed by versus the level it was prior to the Federal Reserve's January 2026 meeting.\n\nIf the target federal funds rate is changed to a level not expressed in the displayed options, the change will be rounded up to the nearest 25 and will resolve to the relevant bracket. (e.g. if there's a cut/increase of 12.5 bps it will be considered to be 25 bps)\n\nThe resolution source for this market is the FOMC’s statement after its meeting scheduled for January 27 - 28, 2026 according to the official calendar: https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm.\n\nThe level and change of the target federal funds rate is also published at the official website of the Federal Reserve at https://www.federalreserve.gov/monetarypolicy/openmarket.htm.\n\nThis market may resolve as soon as the FOMC’s statement for their January meeting with relevant data is issued. If no statement is released by the end date of the next scheduled meeting, this market will resolve to the \"No change\" bracket.\n",
+    "analysis": {
+      "2026-01-28": [
+        {
+          "choice": "50+ bps decrease",
+          "signal": "Yes: 0.1% | No: 100%",
+          "vol": "$220,329,962"
+        },
+        {
+          "choice": "25 bps decrease",
+          "signal": "Yes: 0.4% | No: 100%",
+          "vol": "$76,111,193"
+        },
+        {
+          "choice": "No change",
+          "signal": "Yes: 99% | No: 0.8%",
+          "vol": "$78,107,082"
+        },
+        {
+          "choice": "25+ bps increase",
+          "signal": "Yes: 0.1% | No: 100%",
+          "vol": "$190,398,194"
+        }
+      ]
+    }
+  }
+]

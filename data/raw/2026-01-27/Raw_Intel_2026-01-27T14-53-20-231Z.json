@@ -1,0 +1,184 @@
+[
+  {
+    "title": "What will Gold (GC) hit__ by end of June?",
+    "category": "COMEX Gold Futures, Daily, Commodities, Hide From New, Up or Down, Finance",
+    "url": "https://polymarket.com/event/gc-hit-jun-2026",
+    "start_date": "2025-12-26T23:26:49.576896Z",
+    "end_date": "2026-06-30T17:30:00Z",
+    "description": "This market will resolve to \"Yes\" if, on any trading day, the official CME settlement price for the Active Month (front month) of Gold (GC) futures is equal to or above the listed price by the final trading day of June 2026. Otherwise, the market will resolve to \"No\".\n\nFor CME Gold (GC) futures contracts, the Active Month is the nearest of CME's designated delivery-cycle months (February, April, June, August, October, December) that is not the spot month. The Active Month changes automatically on the contract's First Position Date, at which point the next eligible contract month becomes the Active Month.\n\nOnly the Active Month's official settlement price published by CME Group will be considered. Intraday trades, highs, lows, bids, offers, midpoint values, or indicative prices do not count.\n\nNote that the settlement price may differ from the last traded price. CME's methodology to determine the settlement price can vary by commodity and contract.\n\nOnly days on which CME publishes an official settlement price for the Active Month will be included. Days without settlement prices (weekends, holidays, or market closures) are ignored.\n\nThis market will resolve based on the settlement price as it appears on the CME settlement page at the time it is first published for that trading day, regardless of any later corrections or updates.\n\nThe resolution source for this market is the CME Group website — specifically, the daily \"Settlement\" price for the Active Month of Gold (GC) futures.",
+    "event_total_volume": "$131,933",
+    "signals": [
+      {
+        "node": "↑ $8,000",
+        "win_rate": "Yes: 15.4% | No: 84.5%",
+        "volume": "$2,945",
+        "liquidity": "$8,864",
+        "price_change_24h": "0%",
+        "market_health": "✅ Healthy"
+      },
+      {
+        "node": "↑ $7,000",
+        "win_rate": "Yes: 17.2% | No: 82.8%",
+        "volume": "$1,000",
+        "liquidity": "$8,392",
+        "price_change_24h": "0%",
+        "market_health": "✅ Healthy"
+      },
+      {
+        "node": "↑ $6,500",
+        "win_rate": "Yes: 24.0% | No: 76.0%",
+        "volume": "$21,528",
+        "liquidity": "$6,341",
+        "price_change_24h": "0%",
+        "market_health": "✅ Healthy"
+      },
+      {
+        "node": "↑ $6,200",
+        "win_rate": "Yes: 41.5% | No: 58.5%",
+        "volume": "$3,342",
+        "liquidity": "$4,597",
+        "price_change_24h": "0%",
+        "market_health": "✅ Healthy"
+      },
+      {
+        "node": "↑ $6,000",
+        "win_rate": "Yes: 48.0% | No: 52.0%",
+        "volume": "$10,957",
+        "liquidity": "$3,287",
+        "price_change_24h": "0%",
+        "market_health": "✅ Healthy"
+      },
+      {
+        "node": "↑ $5,500",
+        "win_rate": "Yes: 77.5% | No: 22.5%",
+        "volume": "$30,049",
+        "liquidity": "$15,703",
+        "price_change_24h": "0%",
+        "market_health": "✅ Healthy"
+      },
+      {
+        "node": "↑ $5,000",
+        "win_rate": "Yes: 100.0% | No: 0.0%",
+        "volume": "$41,660",
+        "liquidity": "$0",
+        "price_change_24h": "0%",
+        "market_health": "✅ Healthy"
+      },
+      {
+        "node": "↓ $5,000",
+        "win_rate": "Yes: 100.0% | No: 0.0%",
+        "volume": "$3,106",
+        "liquidity": "$0",
+        "price_change_24h": "0%",
+        "market_health": "✅ Healthy"
+      },
+      {
+        "node": "↓ $4,800",
+        "win_rate": "Yes: 100.0% | No: 0.0%",
+        "volume": "$3,147",
+        "liquidity": "$0",
+        "price_change_24h": "0%",
+        "market_health": "✅ Healthy"
+      },
+      {
+        "node": "↓ $4,600",
+        "win_rate": "Yes: 100.0% | No: 0.0%",
+        "volume": "$3,171",
+        "liquidity": "$0",
+        "price_change_24h": "0%",
+        "market_health": "✅ Healthy"
+      },
+      {
+        "node": "↓ $4,400",
+        "win_rate": "Yes: 100.0% | No: 0.0%",
+        "volume": "$1,810",
+        "liquidity": "$0",
+        "price_change_24h": "0%",
+        "market_health": "✅ Healthy"
+      },
+      {
+        "node": "↓ $4,200",
+        "win_rate": "Yes: 38.5% | No: 61.5%",
+        "volume": "$2,986",
+        "liquidity": "$2,155",
+        "price_change_24h": "0%",
+        "market_health": "✅ Healthy"
+      },
+      {
+        "node": "↓ $3,800",
+        "win_rate": "Yes: 21.5% | No: 78.5%",
+        "volume": "$4,406",
+        "liquidity": "$552",
+        "price_change_24h": "0%",
+        "market_health": "✅ Healthy"
+      },
+      {
+        "node": "↓ $3,400",
+        "win_rate": "Yes: 9.0% | No: 91.0%",
+        "volume": "$1,822",
+        "liquidity": "$119",
+        "price_change_24h": "0%",
+        "market_health": "✅ Healthy"
+      },
+      {
+        "node": "↑ $5,700",
+        "win_rate": "Yes: 67.5% | No: 32.5%",
+        "volume": "$0",
+        "liquidity": "$2,041",
+        "price_change_24h": "0%",
+        "market_health": "✅ Healthy"
+      },
+      {
+        "node": "↑ $8,500",
+        "win_rate": "Yes: 11.0% | No: 89.0%",
+        "volume": "$4",
+        "liquidity": "$4,609",
+        "price_change_24h": "0%",
+        "market_health": "✅ Healthy"
+      }
+    ]
+  },
+  {
+    "title": "Fed decision in January?",
+    "category": "Fed Rates, Economy, Politics, Economic Policy, Jerome Powell, Fed, Finance",
+    "url": "https://polymarket.com/event/fed-decision-in-january",
+    "start_date": "2025-09-17T16:22:33.947135Z",
+    "end_date": "2026-01-28T00:00:00Z",
+    "description": "The FED interest rates are defined in this market by the upper bound of the target federal funds range. The decisions on the target federal fund range are made by the Federal Open Market Committee (FOMC) meetings.\n\nThis market will resolve to the amount of basis points the upper bound of the target federal funds rate is changed by versus the level it was prior to the Federal Reserve's January 2026 meeting.\n\nIf the target federal funds rate is changed to a level not expressed in the displayed options, the change will be rounded up to the nearest 25 and will resolve to the relevant bracket. (e.g. if there's a cut/increase of 12.5 bps it will be considered to be 25 bps)\n\nThe resolution source for this market is the FOMC’s statement after its meeting scheduled for January 27 - 28, 2026 according to the official calendar: https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm.\n\nThe level and change of the target federal funds rate is also published at the official website of the Federal Reserve at https://www.federalreserve.gov/monetarypolicy/openmarket.htm.\n\nThis market may resolve as soon as the FOMC’s statement for their January meeting with relevant data is issued. If no statement is released by the end date of the next scheduled meeting, this market will resolve to the \"No change\" bracket.\n",
+    "event_total_volume": "$564,473,842",
+    "signals": [
+      {
+        "node": "50+ bps decrease",
+        "win_rate": "Yes: 0.1% | No: 99.9%",
+        "volume": "$220,189,536",
+        "liquidity": "$3,173,811",
+        "price_change_24h": "0%",
+        "market_health": "✅ Healthy"
+      },
+      {
+        "node": "25 bps decrease",
+        "win_rate": "Yes: 0.4% | No: 99.6%",
+        "volume": "$75,998,928",
+        "liquidity": "$5,293,173",
+        "price_change_24h": "0%",
+        "market_health": "✅ Healthy"
+      },
+      {
+        "node": "No change",
+        "win_rate": "Yes: 99.3% | No: 0.8%",
+        "volume": "$77,967,911",
+        "liquidity": "$2,528,090",
+        "price_change_24h": "0%",
+        "market_health": "✅ Healthy"
+      },
+      {
+        "node": "25+ bps increase",
+        "win_rate": "Yes: 0.1% | No: 99.9%",
+        "volume": "$190,319,924",
+        "liquidity": "$2,522,085",
+        "price_change_24h": "0%",
+        "market_health": "✅ Healthy"
+      }
+    ]
+  }
+]

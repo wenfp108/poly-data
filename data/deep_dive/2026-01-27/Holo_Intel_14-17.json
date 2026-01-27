@@ -1,0 +1,40 @@
+[
+  {
+    "meta": {
+      "title": "China x India military clash by...?",
+      "url": "https://polymarket.com/event/china-x-india-military-clash-by-december-31",
+      "tags": "India, Politics, China, Geopolitics, World",
+      "risk": "🔴 Noise (Low Liq)",
+      "updated": "2026-01-27T14:17:22.041Z"
+    },
+    "data": {
+      "volume": "$115,500",
+      "liquidity": "$1,670",
+      "end_date": "2025-12-31",
+      "description": "This is a market on the likelihood of a military clash between China and India occurring by December 31.",
+      "markets": [
+        {
+          "question": "China x India military clash by December 31?",
+          "prices": "Yes: 0% | No: 100%",
+          "spread": "✅ Tight",
+          "liquidity": "$0",
+          "status": "🟢 Active"
+        },
+        {
+          "question": "China x India military clash by June 30?",
+          "prices": "Yes: 0% | No: 100%",
+          "spread": "✅ Tight",
+          "liquidity": "$0",
+          "status": "🟢 Active"
+        },
+        {
+          "question": "China x India military clash by December 31, 2026?",
+          "prices": "Yes: 18% | No: 82%",
+          "spread": "✅ Tight",
+          "liquidity": "$1,670",
+          "status": "🟢 Active"
+        }
+      ]
+    }
+  }
+]

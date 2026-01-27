@@ -1,0 +1,21 @@
+name: UCIP Strategy Sync
+
+on:
+  # 1. 自动定时：每小时的第 18 分钟触发
+  schedule:
+    - cron: '18 * * * *'
+  
+  # 2. 手动触发：允许你在 GitHub 界面上手动点按钮运行测试
+  workflow_dispatch:
+
+jobs:
+  trigger-scout:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wake up Vercel (Secure Mode)
+        run: |
+          # 🚀 这里的地址和密码都已经帮你填好了
+          # 域名: poly-data.vercel.app
+          # 密码: 520laowen
+          
+          curl -s -X GET "https://poly-data.vercel.app/api?key=520laowen"

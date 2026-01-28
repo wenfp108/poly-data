@@ -1,5 +1,4 @@
-name: Macro Scouter Trigger
-
+name: 🎯 Sniper Hourly Scan (Strategy)
 on:
   schedule:
     # 计划任务：每小时的第 15 分钟运行一次

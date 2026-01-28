@@ -99,11 +99,45 @@ graph TD
 
 ```json
 {
-  "question": "50+ bps decrease",
-  "prices": "Yes: 0.1% | No: 100.0%",
-  "strategy_tags": ["TAIL_RISK", "HIGH_CERTAINTY"],
-  "engine": "sniper",
-  "category": "ECONOMY"
+    "slug": "fed-decision-in-january",
+
+    "ticker": "fed-decreases-interest-rates-by-50-bps-after-january-2026-meeting",
+
+    "question": "50+ bps decrease",
+
+    "eventTitle": "Fed decision in January?",
+
+    "prices": "Yes: 0.1% | No: 100.0%",
+
+    "volume": 231737266,
+
+    "liquidity": 5363392,
+
+    "endDate": "2026-01-28",
+
+    "dayChange": "-0.10%",
+
+    "vol24h": 14106410,
+
+    "spread": "0.10%",
+
+    "sortOrder": 0,
+
+    "updatedAt": "2026-01-28T14:17:28.693057Z",
+
+    "engine": "sniper",
+
+    "core_topic": "Fed decision in {month}?",
+
+    "category": "ECONOMY",
+
+    "url": "https://polymarket.com/event/fed-decision-in-january",
+
+    "strategy_tags": [
+
+      "TAIL_RISK",
+
+      "HIGH_CERTAINTY"
 }
 
 ```

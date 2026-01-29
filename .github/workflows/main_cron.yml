@@ -23,9 +23,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
+          # cache: 'npm'  <-- ❌ 删除这行，因为没有 lock 文件无法缓存
 
-      # 🔥 【关键修复】拆分成多行，防止格式报错
+      # 安装 Chrome 依赖 (保持不变)
       - name: Install System Dependencies for Chrome
         run: |
           sudo apt-get update
@@ -68,7 +68,7 @@ jobs:
             xdg-utils
 
       - name: Install Project Dependencies
-        run: npm ci
+        run: npm install  # ✅ 修改处：从 npm ci 改为 npm install (自动生成 lock 文件)
 
       # 🎯 Phase 1: Sniper
       - name: 🎯 Run Sniper Engine

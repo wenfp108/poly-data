@@ -1,0 +1,55 @@
+name: 🏦 Central Bank Harvest & Cleanup
+
+on:
+  workflow_run:
+    workflows: ["⚔️ PolyData Dual-Engine System"] # 必须完全匹配上游 Workflow 的 name
+    types:
+      - completed
+
+jobs:
+  harvest:
+    # 只有当抓取数据成功时才执行收割逻辑，体现防御型投资者的严谨
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Scraper Repo (Current)
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.MY_PAT }} # 需要权限来推送删除操作
+
+      - name: Checkout Central Bank (Vault)
+        uses: actions/checkout@v4
+        with:
+          repository: wenfp108/Central-Bank
+          token: ${{ secrets.MY_PAT }}
+          path: central_bank
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 🏦 Execute Archive & Local Delete
+        run: |
+          # 运行你已有的脚本，它会执行 copy 并 unlink 掉本地文件
+          node scripts/archive-poly-to-bank.js
+          
+      - name: 📤 Push to Central Bank
+        run: |
+          cd central_bank
+          git config --global user.name 'Architect Bot'
+          git config --global user.email 'bot@architect.alpha'
+          git add .
+          git commit -m "Vault Update: archive polymarket data $(date +%F)" || exit 0
+          git push
+
+      - name: 🧹 Cleanup Scraper Repo
+        run: |
+          # 脚本执行完后，data/ 目录下的今日文件已被 unlink
+          # 这里将这些“删除”操作推送到当前仓库，保持仓库轻量
+          git config --global user.name 'Architect Bot'
+          git config --global user.email 'bot@architect.alpha'
+          git add data/
+          git commit -m "System: Data harvested and moved to Central Bank $(date +%F)" || exit 0
+          git push

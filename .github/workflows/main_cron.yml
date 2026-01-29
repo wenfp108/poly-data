@@ -10,13 +10,15 @@ jobs:
     runs-on: ubuntu-latest
     
     env:
-      MY_PAT: ${{ secrets.MY_PAT }} # 使用你的 PAT 确保有权限推送
+      MY_PAT: ${{ secrets.MY_PAT }} # 确保你在仓库 Secrets 中配置了名为 MY_PAT 的 Token
       REPO_OWNER: ${{ github.repository_owner }}
       GITHUB_REPOSITORY: ${{ github.repository }}
 
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.MY_PAT }} # 👈 【关键修改】显式使用拥有写入权限的 PAT
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -38,13 +40,17 @@ jobs:
       - name: 📡 Run Radar Engine
         run: node radar.js
 
-      # 🌟 新增：将猎物带回家（提交捕获的数据）
+      # 🌟 将猎物带回家（提交捕获的数据）
       - name: 📤 Push Captured Data
         run: |
           git config --global user.name 'Architect Bot'
           git config --global user.email 'bot@architect.alpha'
+          
           # 只添加 data 目录下的新 JSON 文件
           git add data/
+          
           # 如果没有新数据产生，commit 会返回 0 而不会导致工作流失败
           git commit -m "Capture: New signals secured $(date +%F)" || exit 0
+          
+          # 因为 Checkout 步骤使用了 PAT，这里的 push 将自动拥有权限
           git push

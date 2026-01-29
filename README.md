@@ -119,7 +119,3 @@ graph TD
 }
 
 ```
-
----
-
-**提示：** 本系统已针对您的 `Central Bank Harvester` 脚本进行适配。`poly-data` 仓库在收割后将保持 100% 洁净，数据已安全入库。

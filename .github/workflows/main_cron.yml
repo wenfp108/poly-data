@@ -2,8 +2,8 @@ name: ⚔️ PolyData Dual-Engine System
 
 on:
   schedule:
-    - cron: '15 * * * *'  # 每小时 15 分自动触发
-  workflow_dispatch:      # 允许手动触发
+    - cron: '15 * * * *'  # 保持每小时 15 分自动触发
+  workflow_dispatch: 
 
 jobs:
   engage_targets:
@@ -13,7 +13,6 @@ jobs:
       MY_PAT: ${{ secrets.MY_PAT }}
       REPO_OWNER: ${{ github.repository_owner }}
       GITHUB_REPOSITORY: ${{ github.repository }}
-      PUPPETEER_CACHE_DIR: ${{ github.workspace }}/.cache/puppeteer
 
     steps:
       - name: Checkout Code
@@ -23,68 +22,21 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'  # ✅ 【关键修改1】去掉了井号，开启高速缓存
+          cache: 'npm'
 
-      # 🔥【修复版】适配 Ubuntu 24.04 依赖列表 (这部分保持原样)
-      - name: Install System Dependencies for Chrome
+      - name: Install System Dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y \
-            ca-certificates \
-            fonts-liberation \
-            libasound2t64 \
-            libatk-bridge2.0-0 \
-            libatk1.0-0 \
-            libc6 \
-            libcairo2 \
-            libcups2 \
-            libdbus-1-3 \
-            libexpat1 \
-            libfontconfig1 \
-            libgbm1 \
-            libgcc-s1 \
-            libglib2.0-0 \
-            libgtk-3-0 \
-            libnspr4 \
-            libnss3 \
-            libpango-1.0-0 \
-            libpangocairo-1.0-0 \
-            libstdc++6 \
-            libx11-6 \
-            libx11-xcb1 \
-            libxcb1 \
-            libxcomposite1 \
-            libxcursor1 \
-            libxdamage1 \
-            libxext6 \
-            libxfixes3 \
-            libxi6 \
-            libxrandr2 \
-            libxrender1 \
-            libxss1 \
-            libxtst6 \
-            lsb-release \
-            wget \
-            xdg-utils
+          sudo apt-get install -y libnss3 libatk-bridge2.0-0 libcups2 libgbm1 libasound2t64 libpangocairo-1.0-0 libgtk-3-0
 
       - name: Install Project Dependencies
-        run: npm ci  # ✅ 【关键修改2】改为 'npm ci'，比 install 快10倍
+        run: npm ci
 
-      # 🎯 Phase 1: Sniper
       - name: 🎯 Run Sniper Engine
         run: node sniper.js
-        timeout-minutes: 10
 
-      # ⏳ 战术暂停
-      - name: ⏳ Tactical Pause
-        run: |
-          echo "Cooling down engines..."
-          sleep 10
-
-      # 📡 Phase 2: Radar
       - name: 📡 Run Radar Engine
         run: node radar.js
-        timeout-minutes: 10
 
       # 🏦 Phase 3: 中央银行实时收割
       - name: Checkout Central Bank
@@ -96,7 +48,7 @@ jobs:
 
       - name: 🏦 Archive to Central Bank
         run: |
-          # 运行归档脚本 (假设你放在 scripts 目录下)
+          # 确保运行的是 .js 文件，与仓库中的脚本一致
           node scripts/archive-poly-to-bank.js
           
           # 推送到中央银行
@@ -104,5 +56,5 @@ jobs:
           git config --global user.name 'Architect Bot'
           git config --global user.email 'bot@architect.alpha'
           git add .
-          git commit -m "Vault Update: Polymarket Strategy & Trends $(date)" || exit 0
+          git commit -m "Vault Update: archive polymarket data $(date +%F)" || exit 0
           git push

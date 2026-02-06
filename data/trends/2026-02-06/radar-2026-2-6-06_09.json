@@ -1,0 +1,732 @@
+[
+  {
+    "slug": "who-will-trump-nominate-as-fed-chair",
+    "ticker": "will-trump-nominate-judy-shelton-as-the-next-fed-chair",
+    "question": "Judy Shelton",
+    "eventTitle": "Who will Trump nominate as Fed Chair?",
+    "prices": "Yes: 3.0% | No: 97.0%",
+    "volume": 55292845,
+    "liquidity": 607220,
+    "endDate": "2026-12-31",
+    "dayChange": "0.90%",
+    "vol24h": 3043542,
+    "updatedAt": "2026-02-06T06:04:47.998833Z",
+    "category": "POLITICS",
+    "strategy_tags": [
+      "TAIL_RISK",
+      "HIGH_CERTAINTY"
+    ]
+  },
+  {
+    "slug": "who-will-trump-nominate-as-fed-chair",
+    "ticker": "will-trump-nominate-no-one-before-2027",
+    "question": "No one nominated before 2027",
+    "eventTitle": "Who will Trump nominate as Fed Chair?",
+    "prices": "Yes: 0.1% | No: 99.9%",
+    "volume": 11251122,
+    "liquidity": 477582,
+    "endDate": "2026-12-31",
+    "dayChange": "0.10%",
+    "vol24h": 2018121,
+    "updatedAt": "2026-02-06T06:04:48.284293Z",
+    "category": "POLITICS",
+    "strategy_tags": [
+      "TAIL_RISK",
+      "HIGH_CERTAINTY"
+    ]
+  },
+  {
+    "slug": "us-strikes-iran-by",
+    "ticker": "us-strikes-iran-by-february-5-2026",
+    "question": "February 5",
+    "eventTitle": "US strikes Iran by...?",
+    "prices": "Yes: 0.1% | No: 100.0%",
+    "volume": 4430627,
+    "liquidity": 533791,
+    "endDate": "2026-02-05",
+    "dayChange": "-0.60%",
+    "vol24h": 1698629,
+    "updatedAt": "2026-02-06T06:04:51.470691Z",
+    "category": "POLITICS | GEOPOLITICS | WORLD",
+    "strategy_tags": [
+      "TAIL_RISK",
+      "HIGH_CERTAINTY"
+    ]
+  },
+  {
+    "slug": "who-will-trump-nominate-as-fed-chair",
+    "ticker": "will-trump-nominate-kevin-warsh-as-the-next-fed-chair",
+    "question": "Kevin Warsh",
+    "eventTitle": "Who will Trump nominate as Fed Chair?",
+    "prices": "Yes: 95.0% | No: 5.0%",
+    "volume": 31790761,
+    "liquidity": 253586,
+    "endDate": "2026-12-31",
+    "dayChange": "-2.20%",
+    "vol24h": 1192866,
+    "updatedAt": "2026-02-06T06:04:49.547299Z",
+    "category": "POLITICS",
+    "strategy_tags": [
+      "TAIL_RISK",
+      "HIGH_CERTAINTY"
+    ]
+  },
+  {
+    "slug": "russia-x-ukraine-ceasefire-by-march-31-2026",
+    "ticker": "russia-x-ukraine-ceasefire-by-march-31-2026",
+    "question": "Russia x Ukraine ceasefire by March 31, 2026?",
+    "eventTitle": "Russia x Ukraine ceasefire by March 31, 2026?",
+    "prices": "Yes: 8.5% | No: 91.5%",
+    "volume": 14398915,
+    "liquidity": 800591,
+    "endDate": "2026-03-31",
+    "dayChange": "-2.00%",
+    "vol24h": 826381,
+    "updatedAt": "2026-02-06T06:05:21.668846Z",
+    "category": "POLITICS | GEOPOLITICS | WORLD",
+    "strategy_tags": [
+      "RAW_MARKET"
+    ]
+  },
+  {
+    "slug": "portugal-presidential-election",
+    "ticker": "will-andr-ventura-win-the-2026-portugal-presidential-election",
+    "question": "André Ventura (CH)",
+    "eventTitle": "Portugal Presidential Election",
+    "prices": "Yes: 0.5% | No: 99.5%",
+    "volume": 16711689,
+    "liquidity": 952941,
+    "endDate": "2026-01-25",
+    "dayChange": "0.10%",
+    "vol24h": 813940,
+    "updatedAt": "2026-02-06T06:04:55.077126Z",
+    "category": "POLITICS | WORLD",
+    "strategy_tags": [
+      "TAIL_RISK",
+      "HIGH_CERTAINTY"
+    ]
+  },
+  {
+    "slug": "who-will-trump-nominate-as-fed-chair",
+    "ticker": "will-trump-nominate-stephen-miran-as-the-next-fed-chair",
+    "question": "Stephen Miran",
+    "eventTitle": "Who will Trump nominate as Fed Chair?",
+    "prices": "Yes: 0.1% | No: 99.9%",
+    "volume": 13157335,
+    "liquidity": 655817,
+    "endDate": "2026-12-31",
+    "dayChange": "0.10%",
+    "vol24h": 776200,
+    "updatedAt": "2026-02-06T06:04:44.877849Z",
+    "category": "POLITICS",
+    "strategy_tags": [
+      "TAIL_RISK",
+      "HIGH_CERTAINTY"
+    ]
+  },
+  {
+    "slug": "us-strikes-iran-by",
+    "ticker": "us-strikes-iran-by-february-6-2026-242-933-289-312-673-611-155-294",
+    "question": "February 6",
+    "eventTitle": "US strikes Iran by...?",
+    "prices": "Yes: 1.9% | No: 98.0%",
+    "volume": 6853103,
+    "liquidity": 165508,
+    "endDate": "2026-01-31",
+    "dayChange": "0.10%",
+    "vol24h": 732566,
+    "updatedAt": "2026-02-06T06:04:44.886329Z",
+    "category": "POLITICS | GEOPOLITICS | WORLD",
+    "strategy_tags": [
+      "TAIL_RISK",
+      "HIGH_CERTAINTY"
+    ]
+  },
+  {
+    "slug": "who-will-trump-nominate-as-fed-chair",
+    "ticker": "will-trump-nominate-rick-rieder-as-the-next-fed-chair",
+    "question": "Rick Rieder",
+    "eventTitle": "Who will Trump nominate as Fed Chair?",
+    "prices": "Yes: 0.4% | No: 99.7%",
+    "volume": 19861262,
+    "liquidity": 320152,
+    "endDate": "2026-12-31",
+    "dayChange": "0.10%",
+    "vol24h": 668212,
+    "updatedAt": "2026-02-06T06:05:18.398897Z",
+    "category": "POLITICS",
+    "strategy_tags": [
+      "TAIL_RISK",
+      "HIGH_CERTAINTY"
+    ]
+  },
+  {
+    "slug": "who-will-trump-nominate-as-fed-chair",
+    "ticker": "will-trump-nominate-jerome-powell-as-the-next-fed-chair",
+    "question": "Jerome Powell",
+    "eventTitle": "Who will Trump nominate as Fed Chair?",
+    "prices": "Yes: 0.1% | No: 99.9%",
+    "volume": 23930078,
+    "liquidity": 2250857,
+    "endDate": "2026-12-31",
+    "dayChange": "0.00%",
+    "vol24h": 609364,
+    "updatedAt": "2026-02-06T06:05:20.084013Z",
+    "category": "POLITICS",
+    "strategy_tags": [
+      "TAIL_RISK",
+      "HIGH_CERTAINTY"
+    ]
+  },
+  {
+    "slug": "what-will-trump-say-this-week-february-8",
+    "ticker": "will-trump-say-kamala-this-week-february-8",
+    "question": "Kamala",
+    "eventTitle": "What will Trump say this week (February 8)?",
+    "prices": "Yes: 51.0% | No: 49.0%",
+    "volume": 590121,
+    "liquidity": 415,
+    "endDate": "2026-02-08",
+    "dayChange": "0.50%",
+    "vol24h": 586692,
+    "updatedAt": "2026-02-06T06:04:58.960885Z",
+    "category": "POLITICS",
+    "strategy_tags": [
+      "RAW_MARKET"
+    ]
+  },
+  {
+    "slug": "us-next-strikes-iran-on-843",
+    "ticker": "will-the-us-next-strike-iran-on-february-4-2026-et",
+    "question": "February 4",
+    "eventTitle": "US next strikes Iran on...?",
+    "prices": "Yes: 0.1% | No: 100.0%",
+    "volume": 855384,
+    "liquidity": 79097,
+    "endDate": "2026-02-28",
+    "dayChange": "-0.10%",
+    "vol24h": 530167,
+    "updatedAt": "2026-02-06T06:05:12.413276Z",
+    "category": "POLITICS | GEOPOLITICS | WORLD",
+    "strategy_tags": [
+      "TAIL_RISK",
+      "HIGH_CERTAINTY"
+    ]
+  },
+  {
+    "slug": "venezuela-leader-end-of-2026",
+    "ticker": "will-evan-pettus-be-the-leader-of-venezuela-end-of-2026",
+    "question": "Evan Pettus",
+    "eventTitle": "Venezuela leader end of 2026?",
+    "prices": "Yes: 0.1% | No: 100.0%",
+    "volume": 1541598,
+    "liquidity": 113874,
+    "endDate": "2026-12-31",
+    "dayChange": "0.00%",
+    "vol24h": 503306,
+    "updatedAt": "2026-02-06T06:05:02.342347Z",
+    "category": "POLITICS | GEOPOLITICS",
+    "strategy_tags": [
+      "TAIL_RISK",
+      "HIGH_CERTAINTY"
+    ]
+  },
+  {
+    "slug": "democratic-presidential-nominee-2028",
+    "ticker": "will-hillary-clinton-win-the-2028-democratic-presidential-nomination",
+    "question": "Hillary Clinton",
+    "eventTitle": "Democratic Presidential Nominee 2028",
+    "prices": "Yes: 0.8% | No: 99.3%",
+    "volume": 27125016,
+    "liquidity": 1049686,
+    "endDate": "2028-11-07",
+    "dayChange": "0.00%",
+    "vol24h": 470350,
+    "updatedAt": "2026-02-06T06:04:46.744893Z",
+    "category": "POLITICS",
+    "strategy_tags": [
+      "TAIL_RISK",
+      "HIGH_CERTAINTY"
+    ]
+  },
+  {
+    "slug": "us-strikes-iran-by",
+    "ticker": "us-strikes-iran-by-february-28-2026-227-967-547-688-589-491-592-418-452-924-384-915-464-672-196-157-993-596-269-535",
+    "question": "February 28",
+    "eventTitle": "US strikes Iran by...?",
+    "prices": "Yes: 27.5% | No: 72.5%",
+    "volume": 9155197,
+    "liquidity": 120011,
+    "endDate": "2026-01-31",
+    "dayChange": "1.00%",
+    "vol24h": 459563,
+    "updatedAt": "2026-02-06T06:05:01.259106Z",
+    "category": "POLITICS | GEOPOLITICS | WORLD",
+    "strategy_tags": [
+      "RAW_MARKET"
+    ]
+  },
+  {
+    "slug": "who-will-trump-nominate-as-fed-chair",
+    "ticker": "will-trump-nominate-christopher-waller-as-the-next-fed-chair",
+    "question": "Christopher Waller",
+    "eventTitle": "Who will Trump nominate as Fed Chair?",
+    "prices": "Yes: 0.3% | No: 99.8%",
+    "volume": 17561145,
+    "liquidity": 369478,
+    "endDate": "2026-12-31",
+    "dayChange": "0.10%",
+    "vol24h": 438886,
+    "updatedAt": "2026-02-06T06:04:49.797665Z",
+    "category": "POLITICS",
+    "strategy_tags": [
+      "TAIL_RISK",
+      "HIGH_CERTAINTY"
+    ]
+  },
+  {
+    "slug": "who-will-trump-nominate-as-fed-chair",
+    "ticker": "will-trump-nominate-kevin-hassett-as-the-next-fed-chair",
+    "question": "Kevin Hassett",
+    "eventTitle": "Who will Trump nominate as Fed Chair?",
+    "prices": "Yes: 0.4% | No: 99.7%",
+    "volume": 23423115,
+    "liquidity": 424403,
+    "endDate": "2026-12-31",
+    "dayChange": "0.10%",
+    "vol24h": 428192,
+    "updatedAt": "2026-02-06T06:04:56.453509Z",
+    "category": "POLITICS",
+    "strategy_tags": [
+      "TAIL_RISK",
+      "HIGH_CERTAINTY"
+    ]
+  },
+  {
+    "slug": "greece-x-turkey-military-engagement-by-june-30",
+    "ticker": "greece-x-turkey-military-engagement-by-june-30",
+    "question": "Greece x Turkey military engagement by June 30?",
+    "eventTitle": "Greece x Turkey military engagement by June 30?",
+    "prices": "Yes: 6.5% | No: 93.5%",
+    "volume": 411840,
+    "liquidity": 9919,
+    "endDate": "2026-06-30",
+    "dayChange": "0.50%",
+    "vol24h": 396164,
+    "updatedAt": "2026-02-06T06:05:23.117409Z",
+    "category": "POLITICS | GEOPOLITICS | WORLD",
+    "strategy_tags": [
+      "RAW_MARKET"
+    ]
+  },
+  {
+    "slug": "democratic-presidential-nominee-2028",
+    "ticker": "will-rahm-emanuel-win-the-2028-democratic-presidential-nomination-299",
+    "question": "Rahm Emanuel",
+    "eventTitle": "Democratic Presidential Nominee 2028",
+    "prices": "Yes: 1.8% | No: 98.2%",
+    "volume": 4554925,
+    "liquidity": 348939,
+    "endDate": "2028-11-07",
+    "dayChange": "-0.05%",
+    "vol24h": 389435,
+    "updatedAt": "2026-02-06T06:05:10.392821Z",
+    "category": "POLITICS",
+    "strategy_tags": [
+      "TAIL_RISK",
+      "HIGH_CERTAINTY"
+    ]
+  },
+  {
+    "slug": "republican-presidential-nominee-2028",
+    "ticker": "will-mike-pence-win-the-2028-republican-presidential-nomination",
+    "question": "Mike Pence",
+    "eventTitle": "Republican Presidential Nominee 2028",
+    "prices": "Yes: 0.9% | No: 99.2%",
+    "volume": 20366136,
+    "liquidity": 598501,
+    "endDate": "2028-11-07",
+    "dayChange": "0.10%",
+    "vol24h": 384856,
+    "updatedAt": "2026-02-06T06:05:14.416167Z",
+    "category": "POLITICS",
+    "strategy_tags": [
+      "TAIL_RISK",
+      "HIGH_CERTAINTY"
+    ]
+  },
+  {
+    "slug": "democratic-presidential-nominee-2028",
+    "ticker": "will-tim-walz-win-the-2028-democratic-presidential-nomination-475",
+    "question": "Tim Walz",
+    "eventTitle": "Democratic Presidential Nominee 2028",
+    "prices": "Yes: 0.8% | No: 99.3%",
+    "volume": 19497702,
+    "liquidity": 1372052,
+    "endDate": "2028-11-07",
+    "dayChange": "0.00%",
+    "vol24h": 374292,
+    "updatedAt": "2026-02-06T06:05:15.739257Z",
+    "category": "POLITICS",
+    "strategy_tags": [
+      "TAIL_RISK",
+      "HIGH_CERTAINTY"
+    ]
+  },
+  {
+    "slug": "presidential-election-winner-2028",
+    "ticker": "will-greg-abbott-win-the-2028-us-presidential-election",
+    "question": "Greg Abbott",
+    "eventTitle": "Presidential Election Winner 2028",
+    "prices": "Yes: 0.7% | No: 99.4%",
+    "volume": 23179448,
+    "liquidity": 1036387,
+    "endDate": "2028-11-07",
+    "dayChange": "0.00%",
+    "vol24h": 366802,
+    "updatedAt": "2026-02-06T06:05:20.160018Z",
+    "category": "POLITICS",
+    "strategy_tags": [
+      "TAIL_RISK",
+      "HIGH_CERTAINTY"
+    ]
+  },
+  {
+    "slug": "portugal-presidential-election",
+    "ticker": "will-antnio-jos-seguro-win-the-2026-portugal-presidential-election",
+    "question": "António José Seguro (IND)",
+    "eventTitle": "Portugal Presidential Election",
+    "prices": "Yes: 99.4% | No: 0.7%",
+    "volume": 5642309,
+    "liquidity": 192329,
+    "endDate": "2026-01-25",
+    "dayChange": "-0.10%",
+    "vol24h": 365038,
+    "updatedAt": "2026-02-06T06:05:11.716697Z",
+    "category": "POLITICS | WORLD",
+    "strategy_tags": [
+      "TAIL_RISK",
+      "HIGH_CERTAINTY"
+    ]
+  },
+  {
+    "slug": "russia-x-ukraine-ceasefire-by-february-28-2026",
+    "ticker": "russia-x-ukraine-ceasefire-by-february-28-2026",
+    "question": "Russia x Ukraine ceasefire by February 28, 2026?",
+    "eventTitle": "Russia x Ukraine ceasefire by February 28, 2026?",
+    "prices": "Yes: 3.1% | No: 96.9%",
+    "volume": 2387254,
+    "liquidity": 417965,
+    "endDate": "2026-02-28",
+    "dayChange": "-0.30%",
+    "vol24h": 337027,
+    "updatedAt": "2026-02-06T06:04:58.47682Z",
+    "category": "POLITICS | GEOPOLITICS | WORLD",
+    "strategy_tags": [
+      "TAIL_RISK",
+      "HIGH_CERTAINTY"
+    ]
+  },
+  {
+    "slug": "republican-presidential-nominee-2028",
+    "ticker": "will-steve-bannon-win-the-2028-republican-presidential-nomination",
+    "question": "Steve Bannon",
+    "eventTitle": "Republican Presidential Nominee 2028",
+    "prices": "Yes: 0.8% | No: 99.3%",
+    "volume": 4419941,
+    "liquidity": 469869,
+    "endDate": "2028-11-07",
+    "dayChange": "0.00%",
+    "vol24h": 336411,
+    "updatedAt": "2026-02-06T06:05:10.959671Z",
+    "category": "POLITICS",
+    "strategy_tags": [
+      "TAIL_RISK",
+      "HIGH_CERTAINTY"
+    ]
+  },
+  {
+    "slug": "bitcoin-up-or-down-on-february-6",
+    "ticker": "bitcoin-up-or-down-on-february-6",
+    "question": "Bitcoin Up or Down on February 6?",
+    "eventTitle": "Bitcoin Up or Down on February 6?",
+    "prices": "Up: 33.0% | Down: 67.0%",
+    "volume": 566857,
+    "liquidity": 27700,
+    "endDate": "2026-02-06",
+    "dayChange": "-19.50%",
+    "vol24h": 332557,
+    "updatedAt": "2026-02-06T06:04:44.893748Z",
+    "category": "CRYPTO",
+    "strategy_tags": [
+      "REFLEXIVITY_TREND"
+    ]
+  },
+  {
+    "slug": "republican-presidential-nominee-2028",
+    "ticker": "will-elise-stefanik-win-the-2028-republican-presidential-nomination",
+    "question": "Elise Stefanik",
+    "eventTitle": "Republican Presidential Nominee 2028",
+    "prices": "Yes: 0.9% | No: 99.2%",
+    "volume": 11357423,
+    "liquidity": 633456,
+    "endDate": "2028-11-07",
+    "dayChange": "0.10%",
+    "vol24h": 331843,
+    "updatedAt": "2026-02-06T06:05:08.024322Z",
+    "category": "POLITICS",
+    "strategy_tags": [
+      "TAIL_RISK",
+      "HIGH_CERTAINTY"
+    ]
+  },
+  {
+    "slug": "what-price-will-ethereum-hit-in-february-2026",
+    "ticker": "will-ethereum-reach-5000-in-february-2026",
+    "question": "↑ 5,000",
+    "eventTitle": "What price will Ethereum hit in February?",
+    "prices": "Yes: 0.3% | No: 99.8%",
+    "volume": 1074403,
+    "liquidity": 411517,
+    "endDate": "2026-03-01",
+    "dayChange": "0.00%",
+    "vol24h": 328073,
+    "updatedAt": "2026-02-06T06:04:50.102258Z",
+    "category": "CRYPTO",
+    "strategy_tags": [
+      "TAIL_RISK",
+      "HIGH_CERTAINTY"
+    ]
+  },
+  {
+    "slug": "democratic-presidential-nominee-2028",
+    "ticker": "will-michelle-obama-win-the-2028-democratic-presidential-nomination-777",
+    "question": "Michelle Obama",
+    "eventTitle": "Democratic Presidential Nominee 2028",
+    "prices": "Yes: 0.9% | No: 99.1%",
+    "volume": 14555581,
+    "liquidity": 744425,
+    "endDate": "2028-11-07",
+    "dayChange": "-0.10%",
+    "vol24h": 317836,
+    "updatedAt": "2026-02-06T06:05:05.90628Z",
+    "category": "POLITICS",
+    "strategy_tags": [
+      "TAIL_RISK",
+      "HIGH_CERTAINTY"
+    ]
+  },
+  {
+    "slug": "presidential-election-winner-2028",
+    "ticker": "will-lebron-james-win-the-2028-us-presidential-election",
+    "question": "LeBron James",
+    "eventTitle": "Presidential Election Winner 2028",
+    "prices": "Yes: 0.9% | No: 99.2%",
+    "volume": 25820431,
+    "liquidity": 1191569,
+    "endDate": "2028-11-07",
+    "dayChange": "0.00%",
+    "vol24h": 306541,
+    "updatedAt": "2026-02-06T06:04:46.821195Z",
+    "category": "POLITICS",
+    "strategy_tags": [
+      "TAIL_RISK",
+      "HIGH_CERTAINTY"
+    ]
+  },
+  {
+    "slug": "3rd-largest-company-end-of-february",
+    "ticker": "will-tesla-be-the-third-largest-company-in-the-world-by-market-cap-on-february-28",
+    "question": "Tesla",
+    "eventTitle": "3rd largest company end of February?",
+    "prices": "Yes: 0.3% | No: 99.8%",
+    "volume": 264611,
+    "liquidity": 8152,
+    "endDate": "2026-02-28",
+    "dayChange": "0.00%",
+    "vol24h": 252795,
+    "updatedAt": "2026-02-06T06:05:04.808431Z",
+    "category": "ECONOMY | TECH | FINANCE",
+    "strategy_tags": [
+      "TAIL_RISK",
+      "HIGH_CERTAINTY"
+    ]
+  },
+  {
+    "slug": "largest-company-end-of-february",
+    "ticker": "will-amazon-be-the-largest-company-in-the-world-by-market-cap-on-february-28",
+    "question": "Amazon",
+    "eventTitle": "Largest Company End of February?",
+    "prices": "Yes: 0.3% | No: 99.8%",
+    "volume": 504515,
+    "liquidity": 84824,
+    "endDate": "2026-02-28",
+    "dayChange": "0.10%",
+    "vol24h": 238891,
+    "updatedAt": "2026-02-06T06:05:03.578242Z",
+    "category": "ECONOMY | TECH | FINANCE",
+    "strategy_tags": [
+      "TAIL_RISK",
+      "HIGH_CERTAINTY"
+    ]
+  },
+  {
+    "slug": "what-price-will-ethereum-hit-in-february-2026",
+    "ticker": "will-ethereum-reach-2800-in-february-2026",
+    "question": "↑ 2,800",
+    "eventTitle": "What price will Ethereum hit in February?",
+    "prices": "Yes: 9.5% | No: 90.5%",
+    "volume": 554434,
+    "liquidity": 65071,
+    "endDate": "2026-03-01",
+    "dayChange": "-4.50%",
+    "vol24h": 230582,
+    "updatedAt": "2026-02-06T06:04:46.220114Z",
+    "category": "CRYPTO",
+    "strategy_tags": [
+      "RAW_MARKET"
+    ]
+  },
+  {
+    "slug": "claude-5-released-by",
+    "ticker": "will-claude-5-be-released-by-february-6-2026-173-394",
+    "question": "February 6",
+    "eventTitle": "Claude 5 released by…?",
+    "prices": "Yes: 0.3% | No: 99.8%",
+    "volume": 125692,
+    "liquidity": 35115,
+    "endDate": "2026-02-06",
+    "dayChange": "-15.25%",
+    "vol24h": 118393,
+    "updatedAt": "2026-02-06T06:05:11.039199Z",
+    "category": "TECH",
+    "strategy_tags": [
+      "TAIL_RISK",
+      "REFLEXIVITY_TREND",
+      "HIGH_CERTAINTY"
+    ]
+  },
+  {
+    "slug": "2nd-largest-company-end-of-february",
+    "ticker": "will-saudi-aramco-be-the-second-largest-company-in-the-world-by-market-cap-on-february-28",
+    "question": "Saudi Aramco",
+    "eventTitle": "2nd Largest company end of February?",
+    "prices": "Yes: 0.1% | No: 100.0%",
+    "volume": 244342,
+    "liquidity": 16710,
+    "endDate": "2026-02-28",
+    "dayChange": "-0.10%",
+    "vol24h": 97885,
+    "updatedAt": "2026-02-06T06:05:12.00348Z",
+    "category": "ECONOMY | TECH | FINANCE",
+    "strategy_tags": [
+      "TAIL_RISK",
+      "HIGH_CERTAINTY"
+    ]
+  },
+  {
+    "slug": "will-silver-si-hit-by-end-of-february",
+    "ticker": "will-silver-si-hit-high-130-by-end-of-february-915-491-526-914-543-364",
+    "question": "↑ $130",
+    "eventTitle": "Will Silver (SI) hit__ by end of February?",
+    "prices": "Yes: 7.0% | No: 93.0%",
+    "volume": 197897,
+    "liquidity": 156182,
+    "endDate": "2026-02-28",
+    "dayChange": "-3.50%",
+    "vol24h": 28647,
+    "updatedAt": "2026-02-06T06:05:23.064976Z",
+    "category": "FINANCE",
+    "strategy_tags": [
+      "RAW_MARKET"
+    ]
+  },
+  {
+    "slug": "largest-company-end-of-february",
+    "ticker": "will-microsoft-be-the-largest-company-in-the-world-by-market-cap-on-february-28-189",
+    "question": "Microsoft",
+    "eventTitle": "Largest Company End of February?",
+    "prices": "Yes: 0.1% | No: 99.9%",
+    "volume": 280504,
+    "liquidity": 160282,
+    "endDate": "2026-02-28",
+    "dayChange": "0.00%",
+    "vol24h": 24629,
+    "updatedAt": "2026-02-06T06:04:43.891239Z",
+    "category": "ECONOMY | TECH | FINANCE",
+    "strategy_tags": [
+      "TAIL_RISK",
+      "HIGH_CERTAINTY"
+    ]
+  },
+  {
+    "slug": "largest-company-end-of-february",
+    "ticker": "will-tesla-be-the-largest-company-in-the-world-by-market-cap-on-february-28",
+    "question": "Tesla",
+    "eventTitle": "Largest Company End of February?",
+    "prices": "Yes: 0.1% | No: 99.9%",
+    "volume": 274548,
+    "liquidity": 174048,
+    "endDate": "2026-02-28",
+    "dayChange": "0.00%",
+    "vol24h": 23493,
+    "updatedAt": "2026-02-06T06:05:07.937806Z",
+    "category": "ECONOMY | TECH | FINANCE",
+    "strategy_tags": [
+      "TAIL_RISK",
+      "HIGH_CERTAINTY"
+    ]
+  },
+  {
+    "slug": "spacex-ipo-closing-market-cap",
+    "ticker": "will-spacexs-market-cap-be-between-500b-and-600b-at-market-close-on-ipo-day",
+    "question": "500B–600B",
+    "eventTitle": "SpaceX IPO Closing Market Cap",
+    "prices": "Yes: 0.7% | No: 99.3%",
+    "volume": 175465,
+    "liquidity": 22850,
+    "endDate": "2027-12-31",
+    "dayChange": "-0.25%",
+    "vol24h": 8907,
+    "updatedAt": "2026-02-06T06:05:22.864567Z",
+    "category": "TECH | CLIMATE-SCIENCE",
+    "strategy_tags": [
+      "TAIL_RISK",
+      "HIGH_CERTAINTY"
+    ]
+  },
+  {
+    "slug": "spacex-ipo-closing-market-cap",
+    "ticker": "will-spacex-not-ipo-by-december-31-2027",
+    "question": "No IPO before 2028",
+    "eventTitle": "SpaceX IPO Closing Market Cap",
+    "prices": "Yes: 7.0% | No: 93.0%",
+    "volume": 214778,
+    "liquidity": 21109,
+    "endDate": "2027-12-31",
+    "dayChange": "0.50%",
+    "vol24h": 8417,
+    "updatedAt": "2026-02-06T06:04:51.196773Z",
+    "category": "TECH | CLIMATE-SCIENCE",
+    "strategy_tags": [
+      "RAW_MARKET"
+    ]
+  },
+  {
+    "slug": "spacex-ipo-closing-market-cap",
+    "ticker": "will-spacexs-market-cap-be-greater-than-1t-at-market-close-on-ipo-day",
+    "question": "1T+",
+    "eventTitle": "SpaceX IPO Closing Market Cap",
+    "prices": "Yes: 86.0% | No: 14.0%",
+    "volume": 383159,
+    "liquidity": 27914,
+    "endDate": "2027-12-31",
+    "dayChange": "-0.50%",
+    "vol24h": 7042,
+    "updatedAt": "2026-02-06T06:05:03.25361Z",
+    "category": "TECH | CLIMATE-SCIENCE",
+    "strategy_tags": [
+      "RAW_MARKET"
+    ]
+  }
+]
